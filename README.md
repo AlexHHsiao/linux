@@ -19,7 +19,7 @@ the problems which may result by upgrading your kernel.
 
 ---
 
-### Assignment 1
+# Assignment 1
 
 ## Code
 [cmpe283-1.c](/cmpe-283/assignment1/cmpe283-1.c)
