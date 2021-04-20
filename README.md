@@ -17,13 +17,13 @@ Please read the Documentation/process/changes.rst file, as it contains the
 requirements for building and running the kernel, and information about
 the problems which may result by upgrading your kernel.
 
-==================================================================================================
+---
 
 ### Assignment 1
 
 ## Code
-[cmpe283-1.c](/assignment1/cmpe283-1.c)
+[cmpe283-1.c](/cmpe-283/assignment1/cmpe283-1.c)
 
 ## Output
-![output1](/assignment1/1.png)
-![output2](/assignment1/2.png)
+![output1](/cmpe-283/assignment1/1.png)
+![output2](/cmpe-283/assignment1/2.png)
