@@ -27,3 +27,6 @@ the problems which may result by upgrading your kernel.
 ## Output
 ![output1](/cmpe-283/assignment1/1.png)
 ![output2](/cmpe-283/assignment1/2.png)
+
+## Steps to complete
+* Install MV (VMware Workstation 16)
