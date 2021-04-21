@@ -39,6 +39,7 @@ Hongquan Xiao
 * Install Git `sudo apt install git`
 * Clone this repository `git clone https://github.com/AlexHHsiao/linux.git`
 * Navegate to cmpe-283/assignment1 directory
-* Run `make` command. At this moment, you should see lots of file created. Make sure ==cmpe283-1.ko== file exists
+* Run `make` command. At this moment, you should see lots of file created. Make sure **cmpe283-1.ko** file exists
 * Run `sudo insmod ./cmpe283-1.ko`command
-* Run `dmesg` command. You should see  
+* Run `dmesg` command. You should see the output
+* In case you makes any change in **cmpe283-1.c**. Run `sudo rmmod cmpe283-1` and repeat above three steps
