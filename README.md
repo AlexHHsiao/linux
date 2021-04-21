@@ -28,14 +28,17 @@ the problems which may result by upgrading your kernel.
 ![output1](/cmpe-283/assignment1/1.png)
 ![output2](/cmpe-283/assignment1/2.png)
 
+## Team Member
+Hongquan Xiao
+
 ## Steps to complete
-* Install MV (VMware Workstation 16)
+* Install MV (VMware Workstation 16 in my case)
 * Install Linux ISO [ubuntu](https://ubuntu.com/download/desktop)
 * Install make `sudo apt install make`
 * Install GCC which is required for make command `sudo apt install gcc`
 * Install Git `sudo apt install git`
 * Clone this repository `git clone https://github.com/AlexHHsiao/linux.git`
-* Navegate to cmpe-283/assignment1
-* Run `make` command. At this moment, you should see lots of file created. Make sure <mark>cmpe283-1.ko</mark> file exists
+* Navegate to cmpe-283/assignment1 directory
+* Run `make` command. At this moment, you should see lots of file created. Make sure ==cmpe283-1.ko== file exists
 * Run `sudo insmod ./cmpe283-1.ko`command
 * Run `dmesg` command. You should see  
