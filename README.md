@@ -38,7 +38,7 @@ Hongquan Xiao
 * Install GCC which is required for make command `sudo apt install gcc`
 * Install Git `sudo apt install git`
 * Clone this repository `git clone https://github.com/AlexHHsiao/linux.git`
-* Navegate to cmpe-283/assignment1 directory
+* Navegate to **cmpe-283/assignment1** directory
 * Run `make` command. At this moment, you should see lots of file created. Make sure **cmpe283-1.ko** file exists
 * Run `sudo insmod ./cmpe283-1.ko`command
 * Run `dmesg` command. You should see the output
