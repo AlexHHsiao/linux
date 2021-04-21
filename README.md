@@ -30,3 +30,12 @@ the problems which may result by upgrading your kernel.
 
 ## Steps to complete
 * Install MV (VMware Workstation 16)
+* Install Linux ISO [ubuntu](https://ubuntu.com/download/desktop)
+* Install make `sudo apt install make`
+* Install GCC which is required for make command `sudo apt install gcc`
+* Install Git `sudo apt install git`
+* Clone this repository `git clone https://github.com/AlexHHsiao/linux.git`
+* Navegate to cmpe-283/assignment1
+* Run `make` command. At this moment, you should see lots of file created. Make sure <mark>cmpe283-1.ko</mark> file exists
+* Run `sudo insmod ./cmpe283-1.ko`command
+* Run `dmesg` command. You should see  
