@@ -34,6 +34,7 @@ Hongquan Xiao
 ## Steps to complete
 * Install MV (VMware Workstation 16 in my case)
 * Install Linux ISO [ubuntu](https://ubuntu.com/download/desktop)
+* Open Linux and terminal
 * Install make `sudo apt install make`
 * Install GCC which is required for make command `sudo apt install gcc`
 * Install Git `sudo apt install git`
@@ -42,4 +43,4 @@ Hongquan Xiao
 * Run `make` command. At this moment, you should see lots of file created. Make sure **cmpe283-1.ko** file exists
 * Run `sudo insmod ./cmpe283-1.ko`command
 * Run `dmesg` command. You should see the output
-* In case you make any change in **cmpe283-1.c**. Run `sudo rmmod cmpe283-1` and repeat above three steps
+* In case you make any change in **cmpe283-1.c**. Run `sudo rmmod cmpe283-1` command and repeat above three steps
