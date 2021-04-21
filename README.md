@@ -42,4 +42,4 @@ Hongquan Xiao
 * Run `make` command. At this moment, you should see lots of file created. Make sure **cmpe283-1.ko** file exists
 * Run `sudo insmod ./cmpe283-1.ko`command
 * Run `dmesg` command. You should see the output
-* In case you makes any change in **cmpe283-1.c**. Run `sudo rmmod cmpe283-1` and repeat above three steps
+* In case you make any change in **cmpe283-1.c**. Run `sudo rmmod cmpe283-1` and repeat above three steps
