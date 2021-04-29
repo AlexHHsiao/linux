@@ -44,3 +44,23 @@ Hongquan Xiao
 * Run `sudo insmod ./cmpe283-1.ko`command
 * Run `dmesg` command. You should see the output
 * In case you make any change in **cmpe283-1.c**. Run `sudo rmmod cmpe283-1` command and repeat above three steps
+
+---
+## Code
+[cpuid.c](/arch/x86/kvm/cpuid.c)
+[vmx.c](/arch/x86/kvm/vmx/vmx.c)
+
+## Team Member
+Hongquan Xiao
+
+## Steps to complete
+* Make sure you are in this repository 
+* Check your Linux version by running command `uname -a`
+* Run command `cp /boot/config-YOUR-LINUX-VERSION-generic ./.config`
+* Run command `make oldconfig` and keep pressing enter unit it finishes
+* Make sure comment out `CONFIG_MODULE_SIG_ALL`, `CONFIG_MODULE_SIG_KEY`, and `CONFIG_SYSTEM_TRUSTED_KEYS` in newly created config file
+* Run command `make modules && make && sudo make modules_install && sudo make install` to build and install Kernal
+* Run command `sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager` to setup VM
+* Create a new VM using Virtual Machine Manager which installed with above command. You can use ubuntu ISO or any other Linux images
+* Create a test program and compile it in the new VM
+
