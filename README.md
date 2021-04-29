@@ -53,7 +53,7 @@ Hongquan Xiao
 [vmx.c](/arch/x86/kvm/vmx/vmx.c)
 
 ## Team Member
-Hongquan Xiao
+Hongquan Xiao, Yizhou Yan
 
 ## Steps to complete
 * Make sure you are in this repository 
