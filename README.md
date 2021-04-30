@@ -59,6 +59,9 @@ I then installed Virtual Machine Manager inside of the VM and setup the inner VM
 I worked with Yizhou to understand the existing code and wrote test cases to test our changes.
 
 ### Yizhou Yan
+I Worked with Hongquan to setup local enviroment for the assignment. Reviewed and standardlized the steps for building the linux kernel and completing the assignment.
+Focused on editing cpuid.c file. Implemented leaf function in kvm_emulate.cpiud.
+Discussed with Hongquan about the existing measurement code logic in svm.c.
 
 ## Steps to complete
 * Make sure you are in this repository 
