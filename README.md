@@ -53,7 +53,12 @@ Hongquan Xiao
 [vmx.c](/arch/x86/kvm/vmx/vmx.c)
 
 ## Team Member
-Hongquan Xiao, Yizhou Yan
+### Hongquan Xiao
+I worked on setting up the dev environment. I cloned this repository and built the kernel `make modules && make && sudo make modules_install && sudo make install`. 
+I then installed Virtual Machine Manager inside of the VM and setup the inner VM.
+I worked with Yizhou to understand the existing code and wrote test cases to test our changes.
+
+### Yizhou Yan
 
 ## Steps to complete
 * Make sure you are in this repository 
@@ -61,8 +66,8 @@ Hongquan Xiao, Yizhou Yan
 * Run command `cp /boot/config-YOUR-LINUX-VERSION-generic ./.config`
 * Run command `make oldconfig` and keep pressing enter unit it finishes
 * Make sure comment out `CONFIG_MODULE_SIG_ALL`, `CONFIG_MODULE_SIG_KEY`, and `CONFIG_SYSTEM_TRUSTED_KEYS` in newly created config file
-* Run command `make modules && make && sudo make modules_install && sudo make install` to build and install Kernal
+* Run command `make modules && make && sudo make modules_install && sudo make install` to build and install Kernel
 * Run command `sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager` to setup VM
-* Create a new VM using Virtual Machine Manager which installed with above command. You can use ubuntu ISO or any other Linux images
+* Create a new inner VM using Virtual Machine Manager which installed with above command. You can use ubuntu ISO or any other Linux images
 * Create a test program and compile it in the new VM
 
