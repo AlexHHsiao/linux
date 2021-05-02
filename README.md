@@ -74,3 +74,10 @@ Discussed with Hongquan about the existing measurement code logic in svm.c.
 * Create a new inner VM using Virtual Machine Manager which installed with above command. You can use ubuntu ISO or any other Linux images
 * Create a test program and compile it in the new VM
 
+## Question 3
+Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there
+more exits performed during certain VM operations? Approximately how many exits does a full VM
+boot entail?
+
+* The number of exits increase at a stable rate during certain VM operations.
+* There are around a million exits a full VM boot entail.
