@@ -1145,10 +1145,11 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 	ecx = kvm_rcx_read(vcpu);
 
 	if(eax == 0x4fffffff) {
-		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, true);
 		eax = atomic64_read(&exit_counters);
+		printk(KERN_INFO "Number of exits: %u", eax);
 		ebx = (atomic64_read(&exit_duration) >> 32);
 		ecx = (atomic64_read(&exit_duration) & 0xFFFFFFFF);
+		printk(KERN_INFO "32 high bits: %u, 32 low bits: %u", ebx, ecx);
 	} else {
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, false);
 	}

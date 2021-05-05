@@ -36,6 +36,11 @@ EXPORT_SYMBOL(exit_counters);
 atomic64_t exit_duration = ATOMIC64_INIT(0);
 EXPORT_SYMBOL(exit_duration);
 
+
+// giving size 69 because it is between 0 and 98
+atomic64_t customize_counter[69]= {0};
+EXPORT_SYMBOL(customize_counter);
+
 static u32 xstate_required_size(u64 xstate_bv, bool compacted)
 {
 	int feature_bit = 0;
@@ -1145,10 +1150,42 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 	ecx = kvm_rcx_read(vcpu);
 
 	if(eax == 0x4fffffff) {
-		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, true);
 		eax = atomic64_read(&exit_counters);
+		printk(KERN_INFO "Number of exits: %u", eax);
 		ebx = (atomic64_read(&exit_duration) >> 32);
 		ecx = (atomic64_read(&exit_duration) & 0xFFFFFFFF);
+		printk(KERN_INFO "32 high bits: %u, 32 low bits: %u", ebx, ecx);
+	} else if (eax == 0x4ffffffe) {
+		uint32_t result;
+		if(ecx >= 0 && ecx <= 68 && ecx != 65 && ecx != 42 && ecx != 38 && ecx != 35) {
+			// for not enabled
+			if(eax == 3 
+			|| eax == 4 
+			|| eax==5 
+			|| eax==6 
+			|| eax==16 
+			|| eax==11 
+			|| eax==17 
+			|| eax==16 
+			|| eax==33 
+			|| eax==34 
+			|| eax==51 
+			|| eax==54 
+			|| eax==63 
+			|| eax== 64 
+			|| eax==66 
+			|| eax== 67 
+			|| eax== 68) {
+				eax=ebx=ecx=edx=0;
+			} else {
+				eax = atomic64_read(&customize_counter[ecx]); 	
+		       	result = atomic64_read(&customize_counter[ecx]);
+		       	printk(KERN_INFO "exit number %d exits: %d", ecx, result);
+			}
+		} else {
+		       	eax=ebx=ecx=0;
+		       	edx=0xFFFFFFFF;
+	    }
 	} else {
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, false);
 	}

@@ -80,4 +80,38 @@ more exits performed during certain VM operations? Approximately how many exits 
 boot entail?
 
 * The number of exits increase at a stable rate during certain VM operations.
-* There are around a million exits a full VM boot entail.
+* There are around four million exits a full VM boot entail.
+
+---
+# Assignment 3
+
+## Code
+[cpuid.c](/cmpe-283/assignment2/cpuid.c)
+[vmx.c](/cmpe-283/assignment2/vmx.c)
+
+## Team Member
+### Hongquan Xiao
+In the beginning, 
+I worked on the code from assignment 2 and update vmx.c. 
+
+### Yizhou Yan
+
+## Steps to complete
+* Copy the cpuid and vmx files into the location stated in assignment 2
+* Refer to assignment for how to build kernel
+* Make sure to reboot VM before go into the inner VM
+* Create a test program and compile it in the inner VM
+
+
+## Question 3
+Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there
+more exits performed during certain VM operations? Approximately how many exits does a full VM
+boot entail?
+
+* The number of exits increase at a stable rate during certain VM operations.
+* There are around four million exits a full VM boot entail.
+
+## Question 4
+Of the exit types defined in the SDM, which are the most frequent? Least?
+* Most frequent exit types: WRMSR, IO Instruction
+* Least frequent exit types: WBINBD, MOV DR

@@ -71,6 +71,7 @@ MODULE_LICENSE("GPL");
 
 extern atomic64_t exit_counters;
 extern atomic64_t exit_duration;
+extern atomic64_t customize_counter[69];
 
 #ifdef MODULE
 static const struct x86_cpu_id vmx_cpu_id[] = {
@@ -5955,6 +5956,10 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 	u16 exit_handler_index;
 	u64 start_time=rdtsc();
 	atomic64_inc(&exit_counters);
+
+	if (exit_reason < 69) {
+		atomic64_inc(&customize_counter[exit_reason]);
+	}
 
 	/*
 	 * Flush logged GPAs PML buffer, this will make dirty_bitmap more
