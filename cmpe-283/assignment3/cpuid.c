@@ -1161,21 +1161,21 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 			// for not enabled
 			if(eax == 3 
 			|| eax == 4 
-			|| eax==5 
-			|| eax==6 
-			|| eax==16 
-			|| eax==11 
-			|| eax==17 
-			|| eax==16 
-			|| eax==33 
-			|| eax==34 
-			|| eax==51 
-			|| eax==54 
-			|| eax==63 
-			|| eax== 64 
-			|| eax==66 
-			|| eax== 67 
-			|| eax== 68) {
+			|| eax == 5 
+			|| eax == 6 
+			|| eax == 16 
+			|| eax == 11 
+			|| eax == 17 
+			|| eax == 16 
+			|| eax == 33 
+			|| eax == 34 
+			|| eax == 51 
+			|| eax == 54 
+			|| eax == 63 
+			|| eax == 64 
+			|| eax == 66 
+			|| eax == 67 
+			|| eax == 68) {
 				eax=ebx=ecx=edx=0;
 			} else {
 				eax = atomic64_read(&customize_counter[ecx]); 	
