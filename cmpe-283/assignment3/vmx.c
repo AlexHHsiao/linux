@@ -5957,8 +5957,8 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 	u64 start_time=rdtsc();
 	atomic64_inc(&exit_counters);
 
-	if (exit_reason < 69) {
-		atomic64_inc(&customize_counter[exit_reason]);
+	if (exit_reason.basic < 69) {
+		atomic64_inc(&customize_counter[exit_reason.basic]);
 	}
 
 	/*
