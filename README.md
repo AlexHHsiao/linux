@@ -92,9 +92,12 @@ boot entail?
 ## Team Member
 ### Hongquan Xiao
 In the beginning, 
-I worked on the code from assignment 2 and update vmx.c. I had some issue with my PC, so I reinstaslled VM and built the Kernel. I wachted class recording and understood where to make the code change. I then made the change in vmx file to calculate the number of exits by using the atomic_inc function. I researched with Yizhou to understand each condition in cpuid. In the end after all code changes, I tested by using the inner VM and answered follow up question in assignment.
+I worked on the code from assignment 2 and update vmx.c. I had some issue with my PC, so I reinstaslled VM and built the Kernel. I watched class recording and understood where to make the code change. I then made the change in vmx file to calculate the number of exits by using the atomic_inc function. I did research with Yizhou to understand each condition in cpuid. In the end after all code changes, I tested by using the inner VM and answered follow up question in assignment.
 
 ### Yizhou Yan
+In this assignment, I mainly focused on the cpuid.c and vmx.c files.
+Enabled system that responds to the numbers and frequency of each type exits when leaf function is invoked.
+Thanks to Hongquan for helping me installed and built the Kernel and troubleshoot VM issuses.
 
 ## Steps to complete
 * Copy the cpuid and vmx files into the location stated in assignment 2
