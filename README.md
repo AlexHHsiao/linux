@@ -118,3 +118,25 @@ boot entail?
 Of the exit types defined in the SDM, which are the most frequent? Least?
 * Most frequent exit types: WRMSR, IO Instruction
 * Least frequent exit types: WBINBD, MOV DR
+
+---
+# Assignment 4
+
+## Team Member
+### Hongquan Xiao
+I worked on the assignment when the EPT was set to 0
+
+### Yizhou Yan
+
+## Question 2
+Include a sample of your print of exit count output from dmesg from “with ept” and “without ept”.
+![With EPT](/cmpe-283/assignment4/1.png)
+![Without EPT](/cmpe-283/assignment4/2.png)
+
+## Question 3
+What did you learn from the count of exits? Was the count what you expected? If not, why not?
+The count is what I expected. The shadow paging approach is followed when the EPT is set to 0. The nested paging approach is followed when the EPT is not set to 0. There are three kinds of exits enabled, CR3 exits, page fault exits, and TLB flush exits during the shadow paging approach and causes the number of exits increases. Plus, The three kinds of exits occurs in the EPT violation which usually in the nested paging.
+
+## Question 4 
+What changed between the two runs (ept vs no-ept)?
+For no-ept, the number of exits increases compares to ept.
