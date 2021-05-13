@@ -130,8 +130,8 @@ I worked on the assignment when the EPT was set to 0
 
 ## Question 2
 Include a sample of your print of exit count output from dmesg from “with ept” and “without ept”.
-![With EPT](/cmpe-283/assignment4/1.png)
-![Without EPT](/cmpe-283/assignment4/2.png)
+* with ept![With EPT](/cmpe-283/assignment4/1.png)
+* without ept![Without EPT](/cmpe-283/assignment4/2.png)
 
 ## Question 3
 What did you learn from the count of exits? Was the count what you expected? If not, why not?
