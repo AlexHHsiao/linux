@@ -127,7 +127,7 @@ Of the exit types defined in the SDM, which are the most frequent? Least?
 I worked on the assignment when the EPT was set to 0
 
 ### Yizhou Yan
-
+Worked on EPT when it was set to 0.
 ## Question 2
 Include a sample of your print of exit count output from dmesg from “with ept” and “without ept”.
 * with ept ![With EPT](/cmpe-283/assignment4/2.png)
